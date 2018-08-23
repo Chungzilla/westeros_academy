@@ -4,7 +4,7 @@ class CreateHouses < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :motto
       t.string :photo
-      t.sting :colors
+      t.string :colors
       t.string :sigil
 
       t.timestamps
