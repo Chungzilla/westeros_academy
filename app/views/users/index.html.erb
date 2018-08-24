@@ -1,0 +1,11 @@
+<% @users.each do |single_user| %>
+    <h2> User Id: <%= single_user.id %> </h2>
+   <h3> Name: <%= single_user.first_name %> <%= single_user.last_name %></h3>
+   
+   <h1> <%= single_user.house_id %> </h1>
+   <h1> <%= single_user.username %> </h1>
+   <h1> <%= single_user.email %> </h1>
+   <h1> <%= single_user.password %> </h1>
+   <h1> <%= single_user.house.name %> </h1>
+   <hr>
+<% end %>
