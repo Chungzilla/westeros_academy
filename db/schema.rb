@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2018_08_23_192134) do
     t.string "name"
     t.string "motto"
     t.string "photo"
+    t.string "seat"
     t.string "colors"
     t.string "sigil"
     t.datetime "created_at", null: false
@@ -69,10 +70,12 @@ ActiveRecord::Schema.define(version: 2018_08_23_192134) do
     t.string "username"
     t.string "email"
     t.string "password"
+    t.bigint "house_id"
     t.string "userable_type"
     t.bigint "userable_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["house_id"], name: "index_users_on_house_id"
     t.index ["userable_type", "userable_id"], name: "index_users_on_userable_type_and_userable_id"
   end
 

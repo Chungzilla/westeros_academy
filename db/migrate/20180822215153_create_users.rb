@@ -8,7 +8,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :username
       t.string :email
       t.string :password
-      t.references :house_id
+      t.references :house
       t.references :userable, polymorphic: true
 
       t.timestamps
