@@ -68,7 +68,7 @@
 
 
 
-# # Create STUDENT, INSTRUCTOR, and PARENT Users
+# # Create STUDENTS
 
 # Student.create
 # User.create(
@@ -77,12 +77,16 @@
 #     gender: 'female',
 #     photo: 'https://goo.gl/images/6d5K2X', 
 #     username: 'ihavenoname', 
-#     email: 'aryastark@winterfell.com', 
+#     email: 'aryastark@westeros.com', 
 #     password: '1234',
 #     house_id: 1,
 #     userable_type: 'Student', 
 #     userable_id: 1,
 #     )
+
+
+
+# Creaate INSTRUCTORS
 
 # Instructor.create
 # User.create(
@@ -91,13 +95,33 @@
 #     gender: 'male',
 #     photo: 'https://goo.gl/images/rj2Cw7', 
 #     username: 'iknownothing', 
-#     email: 'jonsnow@winterfell.com', 
+#     email: 'jonsnow@westeros.com', 
 #     password: '1234',
 #     house_id: 1,
 #     userable_type: 'Instructor', 
 #     userable_id: 1,
 #     )
 
+# Instructor.create
+# User.create(
+#     first_name: 'Daenerys', 
+#     last_name: 'Targaryen',
+#     gender: 'female',
+#     photo: 'https://goo.gl/images/o2QG9C', 
+#     username: 'dragonqueen', 
+#     email: 'daenerystargaryen@westeros.com', 
+#     password: '1234',
+#     house_id: 3,
+#     userable_type: 'Instructor', 
+#     userable_id: 2,
+#     )
+
+
+
+
+
+
+# Create PARENTS -> Post-MVP
 # Parent.create
 # User.create(
 #     first_name: 'Eddard', 
@@ -138,23 +162,37 @@
 #     syllabus: 'War is one thing. In this course, we will not choose sides when it come to love.',
 # )
 
+# Course.create(
+#     name: 'Dragons 101', 
+#     total_hours: 5,
+#     syllabus: 'In this course, you will learn how and why I was born to rule the Seven Kingdoms... dragons!',
+# )
 
 
 
 
 
 
+# # Create ENROLLMENTS
 
-# Create ENROLLMENTS
+# Enrollment.create(
+#     grade: 100, 
+#     user_id: 1,
+#     course_id: 1,
+# )
 
-Enrollment.create(
-    grade: 100, 
-    user_id: 1,
-    course_id: 1,
-)
+# Enrollment.create(
+#     user_id: 2,
+#     course_id: 1,
+# )
 
-Enrollment.create(
-    user_id: 2,
-    course_id: 1,
-)
+# Enrollment.create(
+#     grade: 95, 
+#     user_id: 1,
+#     course_id: 4,
+# )
 
+# Enrollment.create(
+#     user_id: 4,
+#     course_id: 4,
+# )
