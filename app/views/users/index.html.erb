@@ -1,11 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+</style>
+
 <% @users.each do |single_user| %>
-    <h2> User Id: <%= single_user.id %> </h2>
-   <h3> Name: <%= single_user.first_name %> <%= single_user.last_name %></h3>
-   
-   <h1> <%= single_user.house_id %> </h1>
-   <h1> <%= single_user.username %> </h1>
-   <h1> <%= single_user.email %> </h1>
-   <h1> <%= single_user.password %> </h1>
-   <h1> <%= single_user.house.name %> </h1>
-   <hr>
+
+    <table style="width:100%">
+        <tr>
+            <th> User ID</th>
+            <th> Name</th>
+            <th> Email</th>
+            <th> Username</th>
+            <th> Password</th>
+            <th> House</th>
+        </tr>
+        <tr>
+            <td> <%= single_user.id %> </td>
+            <td>  <%= single_user.first_name %> <%= single_user.last_name %> </td>
+            <td> <%= single_user.email %></td>
+            <td> <%= single_user.username %> </td>
+            <td> <%= single_user.password %></td>
+            <td> <%= single_user.house.name %> - <%= single_user.house_id %> </td>
+        </tr>
+    </table>
 <% end %>
