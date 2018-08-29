@@ -11,10 +11,7 @@ table, th, td {
 }
 
 </style>
-
-<% @users.each do |single_user| %>
-
-    <table style="width:100%">
+<table style="width:100%">
         <tr>
             <th> User ID</th>
             <th> Name</th>
@@ -23,6 +20,8 @@ table, th, td {
             <th> Password</th>
             <th> House</th>
         </tr>
+
+<% @users.each do |single_user| %>
         <tr>
             <td> <%= single_user.id %> </td>
             <td>  <%= single_user.first_name %> <%= single_user.last_name %> </td>
@@ -31,5 +30,5 @@ table, th, td {
             <td> <%= single_user.password %></td>
             <td> <%= single_user.house.name %> - <%= single_user.house_id %> </td>
         </tr>
+        <% end %>
     </table>
-<% end %>
