@@ -1,0 +1,20 @@
+<table style="width:100%">
+        <tr>
+            <th> student ID</th>
+            <th> Name</th>
+            <th> Email</th>
+            <th> Username</th>
+            <th> Password</th>
+            <th> House</th>
+        </tr>
+
+<% @students.each do |single_student| %>
+        <tr>
+            <td> <%= single_student.id %> </td>
+            <td>  <%= single_student.user.first_name %> <%= single_student.user.last_name %> </td>
+            <td> <%= single_student.user.email %></td>
+            <td> <%= single_student.user.username %> </td>
+            <td> <%= single_student.user.password %></td>
+        </tr>
+        <% end %>
+    </table>

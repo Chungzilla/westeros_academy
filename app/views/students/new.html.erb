@@ -5,11 +5,12 @@
        <%= p.text_field :first_name, placeholder: "Enter First Name" %>
        <%= p.text_field :last_name, placeholder: "Enter Last Name" %>
        <%= p.select :gender, User.gender %>
-       <%= p.text_field :photo_url, placeholder: "Enter Photo URL" %>
+       <%= p.text_field :photo, placeholder: "Enter Photo URL" %>
        <%= p.text_field :username, placeholder: "Enter Username" %>
        <%= p.text_field :email, placeholder: "Enter Email" %>
        <%= p.text_field :password, placeholder: "Enter Password" %>
-       <%= p.select :house, User.house %>
+       <%= p.select :house_id, House.all.map{|x|[x.name, x.id]} %>
    <% end %>
+   <%= f.text_field :major, placeholder: "Enter Major" %>
    <%= f.button :submit %>
 <% end %>

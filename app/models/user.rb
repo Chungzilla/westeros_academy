@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :courses, :through => :enrollments
   validates :first_name, :last_name, :gender, :username, :email, :password, presence: true
   validates :email, :username, uniqueness: true
-  accepts_nested_attributes_for :userable
+
 
   def self.gender
     %w[Female Male]
@@ -14,6 +14,5 @@ class User < ApplicationRecord
     %w[Baratheon Greyjoy Lannister Martell Stark Targaryen Tyrell]
   end
 
-  validates :gender, inclusion: {in: User.gender}
-  validates :house, inclusion: {in: User.house}
+ 
 end

@@ -1,6 +1,6 @@
 # #Create Houses
 
-# House.create(
+# h1 = House.create(
 #     name: 'Stark',
 #     seat: 'Winterfell',
 #     motto: 'Winter is Coming',
@@ -68,25 +68,27 @@
 
 
 
-# # Create STUDENTS
+# Create STUDENTS
 
-# Student.create
-# User.create(
-#     first_name: 'Arya', 
-#     last_name: 'Stark',
-#     gender: 'female',
-#     photo: 'https://goo.gl/images/6d5K2X', 
-#     username: 'ihavenoname', 
-#     email: 'aryastark@westeros.com', 
-#     password: '1234',
-#     house_id: 1,
-#     userable_type: 'Student', 
-#     userable_id: 1,
-#     )
+# Student.create(
+#     major: 'Deceit'
+# )
+User.create!(
+    first_name: 'Arya', 
+    last_name: 'Stark',
+    gender: 'Female',
+    photo: 'https://goo.gl/images/6d5K2X', 
+    username: 'ihavenoname', 
+    email: 'aryastark@westeros.com', 
+    password: '1234',
+    house_id: 1,
+    userable_type: 'Student', 
+    userable_id: 1
+)
 
 
 
-# Creaate INSTRUCTORS
+# # Creaate INSTRUCTORS
 
 # Instructor.create
 # User.create(
@@ -121,7 +123,7 @@
 
 
 
-# Create PARENTS -> Post-MVP
+# # Create PARENTS -> Post-MVP
 # Parent.create
 # User.create(
 #     first_name: 'Eddard', 
