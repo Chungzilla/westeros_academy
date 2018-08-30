@@ -23,7 +23,7 @@ class StudentsController < ApplicationController
     end
 
     def create
-        @student = Student.new(student_params)
+        @student = Student.new
         @student.build_user(user_params)
  
         # @student.build_user(first_name: params[:user][:first_name])
@@ -35,12 +35,26 @@ class StudentsController < ApplicationController
         end
     end
 
+    def edit
+        @student = Student.find(params[:id])
+        # Show edit form
+    end
+
+    def update
+        @student = Student.find(params[:id])
+        
+        if @student.update(student_params) && @student.user.update(user_params)
+            redirect_to @student
+        else
+            render 'edit'
+        end
+
+    end
+
     private
         def user_params
             params.require(:user).permit(:first_name, :last_name, :gender, :photo, :username, :email, :password, :house_id)
         end
 
-        def student_params
-            params.require(:student).permit(:major)
-        end
+       
 end

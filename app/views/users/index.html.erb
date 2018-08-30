@@ -11,6 +11,8 @@ table, th, td {
 }
 
 </style>
+
+<h1>Users</h1>
 <table style="width:100%">
         <tr>
             <th> User ID</th>
@@ -27,8 +29,14 @@ table, th, td {
             <td>  <%= single_user.first_name %> <%= single_user.last_name %> </td>
             <td> <%= single_user.email %></td>
             <td> <%= single_user.username %> </td>
-            <td> <%= single_user.password %></td>
-            <td> <%= single_user.house.name %> - <%= single_user.house_id %> </td>
+            <td> <%= single_user.password %> </td>
+            <td> <%= single_user.house.name %> </td>
         </tr>
         <% end %>
     </table>
+
+    <p> <%= link_to 'Add New Student', new_student_path %> </p>
+    <p> <%= link_to 'Add New Instructor', new_instructor_path %> </p>
+    <p> <%= link_to 'Add New Course', new_course_path %> </p>
+    <p> <%= link_to 'Add New Enrollment', new_enrollment_path %> </p>
+

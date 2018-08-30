@@ -11,6 +11,5 @@
        <%= p.text_field :password, placeholder: "Enter Password" %>
        <%= p.select :house_id, House.all.map{|x|[x.name, x.id]} %>
    <% end %>
-   <%= f.text_field :major, placeholder: "Enter Major" %>
    <%= f.button :submit %>
 <% end %>
