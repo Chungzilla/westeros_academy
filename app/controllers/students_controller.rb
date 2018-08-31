@@ -43,7 +43,6 @@ class StudentsController < ApplicationController
 
     def update
         @student = Student.find(params[:id])
-        
         if @student.user.update(user_params)
             redirect_to @student
         else
@@ -52,10 +51,15 @@ class StudentsController < ApplicationController
 
     end
 
+    def destroy
+        @student = Student.find(params[:id])
+        @student.destroy
+        redirect_to students_path
+    end
+
     private
         def user_params
-            params.require(:user).permit(:first_name, :last_name, :gender, :photo, :username, :email, :password, :house_id)
+            params.require(:user).permit(:first_name, :last_name, :gender, :username, :email, :password, :house_id, :photo)
         end
 
-       
 end

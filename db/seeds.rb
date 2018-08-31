@@ -75,7 +75,6 @@ User.create!(
     first_name: 'Arya', 
     last_name: 'Stark',
     gender: 'Female',
-    photo: 'https://goo.gl/images/6d5K2X', 
     username: 'ihavenoname', 
     email: 'aryastark@westeros.com', 
     password: '1234',
@@ -85,7 +84,6 @@ User.create!(
 )
 
 
-
 # Creaate INSTRUCTORS
 
 Instructor.create
@@ -93,7 +91,6 @@ User.create(
     first_name: 'Jon', 
     last_name: 'Snow',
     gender: 'male',
-    photo: 'https://goo.gl/images/rj2Cw7', 
     username: 'iknownothing', 
     email: 'jonsnow@westeros.com', 
     password: '1234',
@@ -107,7 +104,6 @@ User.create(
     first_name: 'Daenerys', 
     last_name: 'Targaryen',
     gender: 'female',
-    photo: 'https://goo.gl/images/o2QG9C', 
     username: 'dragonqueen', 
     email: 'daenerystargaryen@westeros.com', 
     password: '1234',

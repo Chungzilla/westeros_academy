@@ -1,11 +1,11 @@
 <h1>Update Student</h1>
 
-<%= form_for @student do |f|%>
-   <%= fields_for :user, @student.user do |p| %>
+<%= form_for @student, html: {multipart: true}  do |f|%>
+   <%= fields_for :user, @student.user, multipart: true do |p| %>
        First Name: <%= p.text_field :first_name %>
        Last Name: <%= p.text_field :last_name %>
        Gender: <%= p.select :gender, User.gender %> <br>
-       Photo: <%= p.text_field :photo %>
+       Photo:  <%= p.file_field :photo %>
        Username: <%= p.text_field :username %>
        Email: <%= p.text_field :email %>
        Password: <%= p.text_field :password %>
