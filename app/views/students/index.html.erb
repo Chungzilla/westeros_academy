@@ -1,11 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+</style>
+
 <table style="width:100%">
         <tr>
             <th> Student ID</th>
             <th> Name</th>
             <th> Email</th>
             <th> Edit</th>
-         
-           
+            <th> Delete</th>
         </tr>
 
 <% @students.each do |single_student| %>
@@ -14,9 +27,9 @@
             <td> <%= link_to single_student.user.full_name, {:action => 'show', :id => single_student.id} -%> </td>
             <td> <%= single_student.user.email %></td>
             <td> <%= link_to 'Edit', edit_student_path(single_student.id) %> </td>
+            <td> <%= link_to 'Delete', single_student, method: :delete, data: { confirm: 'Are you sure?' } %> </td>
             
         </tr>
         <% end %>
     </table>
 
-   

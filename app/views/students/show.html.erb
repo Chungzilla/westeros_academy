@@ -3,7 +3,11 @@
      
 <h2><%= @student.user.first_name %> <%= @student.user.last_name %></h2>
 
-<img src="https://www.hbo.com/content/dam/hbodata/series/game-of-thrones/character/s5/arya-stark-1920.jpg/_jcr_content/renditions/cq5dam.web.1200.675.jpeg">
+<% if @student.user.photo.attached? %>
+    <%= image_tag @student.user.photo %>
+<% else %>
+    <%= image_tag image_path("temp_avatar.jpeg") %>
+<% end%>
 
 <h3> House: <%= @student.user.house.name %> </h3>
 <h3> Username: <%= @student.user.username %> </h3>
