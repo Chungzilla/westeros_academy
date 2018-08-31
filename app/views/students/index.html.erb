@@ -3,8 +3,8 @@
             <th> Student ID</th>
             <th> Name</th>
             <th> Email</th>
-            <th> Username</th>
-            <th> Password</th>
+            <th> Edit</th>
+         
            
         </tr>
 
@@ -13,8 +13,8 @@
             <td> <%= single_student.id %> </td>
             <td> <%= link_to single_student.user.full_name, {:action => 'show', :id => single_student.id} -%> </td>
             <td> <%= single_student.user.email %></td>
-            <td> <%= single_student.user.username %> </td>
-            <td> <%= single_student.user.password %></td>
+            <td> <%= link_to 'Edit', edit_student_path(single_student.id) %> </td>
+            
         </tr>
         <% end %>
     </table>

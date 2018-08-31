@@ -12,7 +12,7 @@ table, th, td {
 
 </style>
 
-<p> <%= link_to 'Students', students_path %> </p>
+    <p> <%= link_to 'Students', students_path %> </p>
     <p> <%= link_to 'Instructors', new_instructor_path %> </p>
     <p> <%= link_to 'Courses', new_course_path %> </p>
     <p> <%= link_to 'Enrollments', new_enrollment_path %> </p>
@@ -23,6 +23,7 @@ table, th, td {
             <th> User ID</th>
             <th> Name</th>
             <th> Email</th>
+            <th> User Type</th>
             <th> Username</th>
             <th> Password</th>
             <th> House</th>
@@ -33,12 +34,13 @@ table, th, td {
             <td> <%= single_user.id %> </td>
             <td>  <%= single_user.first_name %> <%= single_user.last_name %> </td>
             <td> <%= single_user.email %></td>
+            <td> <%= single_user.userable_type %></td>
             <td> <%= single_user.username %> </td>
             <td> <%= single_user.password %> </td>
             <td> <%= single_user.house.name %> </td>
         </tr>
-        <% end %>
-    </table>
+    <% end %>
+</table>
 
     <p> <%= link_to 'Add New Student', new_student_path %> </p>
     <p> <%= link_to 'Add New Instructor', new_instructor_path %> </p>
