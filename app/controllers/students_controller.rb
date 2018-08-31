@@ -20,6 +20,7 @@ class StudentsController < ApplicationController
  
     def show
         @student = Student.find(params[:id])
+        #Renders individual student
     end
 
     def create
