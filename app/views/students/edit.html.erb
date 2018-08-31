@@ -2,14 +2,14 @@
 
 <%= form_for @student do |f|%>
    <%= fields_for :user, @student.user do |p| %>
-       <%= p.text_field :first_name %>
-       <%= p.text_field :last_name %>
-       <%= p.select :gender, User.gender %>
-       <%= p.text_field :photo %>
-       <%= p.text_field :username %>
-       <%= p.text_field :email %>
-       <%= p.text_field :password %>
-       <%= p.select :house_id, House.all.map{|x|[x.name, x.id]} %>
+       First Name: <%= p.text_field :first_name %>
+       Last Name: <%= p.text_field :last_name %>
+       Gender: <%= p.select :gender, User.gender %> <br>
+       Photo: <%= p.text_field :photo %>
+       Username: <%= p.text_field :username %>
+       Email: <%= p.text_field :email %>
+       Password: <%= p.text_field :password %>
+       House: <%= p.select :house_id, House.all.map{|x|[x.name, x.id]} %>
    <% end %>
    <%= f.button :submit %>
 <% end %>

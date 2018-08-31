@@ -13,4 +13,8 @@ class User < ApplicationRecord
   def self.house
     %w[Baratheon Greyjoy Lannister Martell Stark Targaryen Tyrell]
   end
+
+  def full_name
+    "#{first_name}"+" #{last_name}"
+  end
 end

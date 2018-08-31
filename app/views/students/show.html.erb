@@ -1,32 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-table {
-    border-collapse: collapse;
-}
 
-table, th, td {
-    border: 1px solid black;
-}
 
-</style>
-<table>
-        <tr>
-            <th> Name: </th>
-            <th> Email:</th>
-            <th> Username:</th>
-            <th> Password:</th>
-            <th> House:</th>
-        </tr>
+     
+<h2><%= @student.user.first_name %> <%= @student.user.last_name %></h2>
 
-        <tr>
-            <td>  <%= @student.user.first_name %> <%= @student.user.last_name %> </td>
-            <td> <%= @student.user.email %></td>
-            <td> <%= @student.user.username %> </td>
-            <td> <%= @student.user.password %></td>
-            <td> <%= @student.user.house.name %> </td>
-        </tr>
-    </table>
+<img src="https://www.hbo.com/content/dam/hbodata/series/game-of-thrones/character/s5/arya-stark-1920.jpg/_jcr_content/renditions/cq5dam.web.1200.675.jpeg">
 
-    <p> <%= link_to 'Back To Students', index_student_path %> </p>
+<h3> House: <%= @student.user.house.name %> </h3>
+<h3> Username: <%= @student.user.username %> </h3>
+<h3> Email: <%= @student.user.email %> </h3>
+          
+            
+       
+
+<%= link_to 'Back To Students', students_path %>
