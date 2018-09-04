@@ -12,10 +12,11 @@ table, th, td {
 
 </style>
 
-    <p> <%= link_to 'Students', students_path %> </p>
-    <p> <%= link_to 'Instructors', new_instructor_path %> </p>
-    <p> <%= link_to 'Courses', new_course_path %> </p>
-    <p> <%= link_to 'Enrollments', new_enrollment_path %> </p>
+<div class="container-fluid">
+    <div class="action"> <%= link_to 'Students', students_path %> </div>
+    <div class="action"> <%= link_to 'Instructors', new_instructor_path %> </div>
+    <div class="action"> <%= link_to 'Courses', new_course_path %> </div>
+    <div class="action"> <%= link_to 'Enrollments', new_enrollment_path %> </div>
 
 <h1>Users</h1>
 <table style="width:100%">
@@ -42,8 +43,9 @@ table, th, td {
     <% end %>
 </table>
 
-    <p> <%= link_to 'Add New Student', new_student_path %> </p>
-    <p> <%= link_to 'Add New Instructor', new_instructor_path %> </p>
-    <p> <%= link_to 'Add New Course', new_course_path %> </p>
-    <p> <%= link_to 'Add New Enrollment', new_enrollment_path %> </p>
+    <div> <%= link_to 'Add New Student', new_student_path %> </div>
+    <div> <%= link_to 'Add New Instructor', new_instructor_path %> </div>
+    <div> <%= link_to 'Add New Course', new_course_path %> </div>
+    <div> <%= link_to 'Add New Enrollment', new_enrollment_path %> </div>
 
+</div>
