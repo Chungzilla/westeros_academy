@@ -11,8 +11,9 @@
     margin: 5px;
 }
 
-#bootstrap-override body {
+html {
     padding: 10px;
+    background: asset-url("stark_bg.jpg")  no-repeat center center fixed;
 }
 
 // Sidebar
