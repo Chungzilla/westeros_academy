@@ -2,19 +2,58 @@
 @import 'colors';
 @import "bootstrap-custom";
 
-.header{
-    font-family: 'Game';
-}
-
-#bootstrap-override a {
-    color: $light-grey;
-    margin: 5px;
-}
 
 html {
-    padding: 10px;
+    padding: 20px;
     background: asset-url("stark_bg.jpg")  no-repeat center center fixed;
+    background-size: 100%;
+
+
+    #bootstrap-override{
+        background-color: transparent;
+    }
+    .header{
+        font-family: 'Game';
+    }
+
+    #bootstrap-override .navbar{
+        a {
+            color: $light-grey;
+            margin: 5px;
+        }
+    }
+
+    #bootstrap-override .container-fluid{
+       
+        
+        .action {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $black-coral;
+            margin-top: 100px;
+            width: 50%;
+            height: 100px;
+            border: 2px solid $light-grey;
+            border-radius: 25px;
+
+            a {
+                color: $light-grey;
+                font-size: 3em;
+                
+            }
+           
+           
+        }
+        
+    }
+    
 }
+
+
+
+
+
 
 // Sidebar
 
