@@ -1,15 +1,46 @@
-<h1>Update Student</h1>
+<div class="container-fluid">
 
-<%= form_for @student, html: {multipart: true}  do |f|%>
-   <%= fields_for :user, @student.user, multipart: true do |p| %>
-       First Name: <%= p.text_field :first_name %>
-       Last Name: <%= p.text_field :last_name %>
-       Gender: <%= p.select :gender, User.gender %> <br>
-       Photo:  <%= p.file_field :photo %>
-       Username: <%= p.text_field :username %>
-       Email: <%= p.text_field :email %>
-       Password: <%= p.text_field :password %>
-       House: <%= p.select :house_id, House.all.map{|x|[x.name, x.id]} %>
-   <% end %>
-   <%= f.button :submit %>
-<% end %>
+    <div class="edit-wrapper">
+
+        <h1>Update Student</h1>
+
+        <%= form_for @student, html: {multipart: true}  do |f|%>
+        <%= fields_for :user, @student.user, multipart: true do |p| %>
+            <div class="form-group"> 
+                <label for="firstName">First Name:</label>
+                <%= p.text_field :first_name %>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label> 
+                <%= p.text_field :last_name %>
+            </div>
+            <div class="form-group"> 
+                <label for="gender">Gender:</label> 
+                <%= p.select :gender, User.gender %> 
+            </div>
+            <div class="form-group"> 
+                <label for="house">House:</label> 
+                <%= p.select :house_id, House.all.map{|x|[x.name, x.id]} %>
+            </div>
+            <div class="form-group">
+                <label for="username">Username:</label> 
+                <%= p.text_field :username %>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <%= p.text_field :email %>
+            </div>
+            <div class="form-group">
+                <label for="password">Pssword:</label>
+                <%= p.text_field :password %>
+            </div>
+            <div class="form-group">
+                <label for="photo">Photo:</label>
+                <%= p.file_field :photo %>
+            </div>
+        <% end %>
+        <div> <%= f.button :submit %> </div>
+        <% end %>
+
+    </div>
+</div>
