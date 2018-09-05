@@ -1,1 +1,118 @@
+@import 'fonts';
+@import 'colors';
 @import "bootstrap-custom";
+
+
+html {
+    padding: 20px;
+    background: asset-url("stark_bg.jpg")  no-repeat center center fixed;
+    background-size: 100%;
+
+
+    #bootstrap-override{
+        background-color: transparent;
+    }
+    .header{
+        font-family: 'Game';
+    }
+
+    #bootstrap-override .navbar{
+        a {
+            color: $light-grey;
+            margin: 5px;
+        }
+    }
+
+    #bootstrap-override .container-fluid{
+      
+        
+        .action {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $black-coral;
+            margin-top: 100px;
+            width: 50%;
+            height: 100px;
+            border: 2px solid $light-grey;
+            border-radius: 25px;
+
+            a {
+                color: $light-grey;
+                font-size: 3em;
+                
+            }
+        }
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 1000%;
+    }
+    
+    table, th, td {
+        margin-top: 30px;
+        border: 1px solid $light-grey;
+        color: $light-grey;
+        background-color: $charleston-green;
+    }
+}
+
+
+
+
+
+
+// Sidebar
+
+// #sidebar-wrapper{
+//     z-index: 1;
+//     positiion: absolute;
+   
+//     height: 100%;
+//     overflow-y: hidden;
+//     background: #2C3E50;
+//     border: 2px solid red;
+//     opacity: 0.9;
+// }
+
+// // main-content
+
+// #page-content-wrapper{
+//     width: 100%;
+//     position: absolute;
+//     padding: 15px;
+//     border: 5px solid green;
+// }
+
+// // Change sidebar to displayed
+
+// #wrapper.menuDisplayed #sidebar-wrapper{
+//     width: 250px;
+
+// }
+
+// #wrapper.menuDisplayed #page-content-wrapper{
+//     padding-left: 250px;
+
+// }
+
+// .sidebar-nav{
+//     padding: 0;
+//     list-style: none;
+// }
+
+// .sidebar-nav li{
+//     text-indent: 20px;
+//     line-height: 40px;
+// }
+
+// .sidebar-nav li a{
+//     display: block;
+//     text-decoration: none;
+//     color: #ddd;
+// }
+
+// .sidebar-nav li a:hover{
+//     background: #16A085;
+// }
