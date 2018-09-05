@@ -1,26 +1,52 @@
+<div class="container-fluid">
+    <div class="options">
+        <div class="small-action">
+            <%= link_to 'Back To Students', students_path %>
+        </div>
+        
+        <div class="small-action">
+            <%= link_to 'Edit Student', edit_student_path(@student) %> 
+        </div>
+    </div>
 
-<%= link_to 'Back To Students', students_path %>
-     
-<h2><%= @student.user.first_name %> <%= @student.user.last_name %></h2>
+    <div class="show-wrapper">
 
-<% if @student.user.photo.attached? %>
-    <%= image_tag @student.user.photo %>
-<% else %>
-    <%= image_tag image_path("temp_avatar.jpeg") %>
-<% end%>
+        <div class="user-info">
+            <h2><%= @student.user.first_name %> <%= @student.user.last_name %></h2>
 
-<h3> House: <%= @student.user.house.name %> </h3>
-<h3> Username: <%= @student.user.username %> </h3>
-<h3> Email: <%= @student.user.email %> </h3>
-          
-            
- <div>
-    <h2>Current Courses:</h2>
+            <% if @student.user.photo.attached? %>
+                <%= image_tag @student.user.photo %>
+            <% else %>
+                <%= image_tag image_path("temp_avatar.jpeg") %>
+            <% end%>
 
-    <% @student.user.enrollments.each do |single_course| %>
+            <h3> House: <%= @student.user.house.name %> </h3>
+            <h3> Username: <%= @student.user.username %> </h3>
+            <h3> Email: <%= @student.user.email %> </h3>
+        </div>
 
-        <%= single_course.course_id %>
-        <%= single_course.course.name %>
-    <% end %>
- </div>
+        <div class="enrollmennt-wrapper">
+            <h2>Current Courses:</h2>
+
+            <table style="width: 100%">
+                <tr>
+                    <th>Course ID</th>
+                    <th>Course Name</th>
+                    
+                    
+                </tr>
+
+                <% @student.user.enrollments.each do |single_course| %>
+                    <tr>
+                        <td> <%= single_course.course_id %> </td>
+                        <td> <%= single_course.course.name %> </td>
+                       
+                    </tr>
+                <% end %>
+            </table>
+        </div>
+
+    </div>
+
+</div>
 

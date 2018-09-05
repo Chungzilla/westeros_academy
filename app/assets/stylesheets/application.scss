@@ -11,6 +11,7 @@ html {
 
 
     #bootstrap-override{
+        color: $light-grey;
         background-color: transparent;
     }
     .header{
@@ -45,22 +46,34 @@ html {
             }
         }
 
-        .small-action{
+        .show-wrapper{
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            background-color: $black-coral;
-            margin-top: 100px;
-            width: 50%;
-            height: 50px;
-            border: 2px solid $light-grey;
-            border-radius: 25px;
+            .user-info{
+                background-color: $charleston-green;
+                width: 50%;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                img {
+                    border: 5px solid white;
+                    height: 500px;
+                    width: 500px;
+                }
+            }
+            
+            .enrollment-wrapper{
+                color: $light-grey;
+                background-color: $charleston-green;
+                margin: 50px;
+            }
         }
     }
 
     table {
         border-collapse: collapse;
-        width: 1000%;
     }
     
     table, th, td {
@@ -71,7 +84,33 @@ html {
     }
 }
 
+.options{
+    display: flex;
+    flex-direction: row;
 
+    .small-action{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $black-coral;
+        margin: 10px;
+        width: 15%;
+        height: 50px;
+        border: 2px solid $light-grey;
+        border-radius: 25px;
+
+        a{
+            color: $light-grey;
+        }
+    }
+
+}
+
+.edit-wrapper{
+    margin-top: 30px;
+    padding: 30px;
+    background-color: $charleston-green;
+}
 
 
 
