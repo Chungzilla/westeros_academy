@@ -1,67 +1,67 @@
-#Create Houses
+# #Create Houses
 
-House.create(
-    name: 'Stark',
-    seat: 'Winterfell',
-    motto: 'Winter is Coming',
-    photo: 'https://goo.gl/images/SxQGyP',
-    colors: 'Grey on white/grey white',
-    sigil: 'A grey direwolf on a white field',
-)
+# House.create(
+#     name: 'Stark',
+#     seat: 'Winterfell',
+#     motto: 'Winter is Coming',
+#     photo: 'https://goo.gl/images/SxQGyP',
+#     colors: 'Grey on white/grey white',
+#     sigil: 'A grey direwolf on a white field',
+# )
 
-House.create(
-    name: 'Lannister',
-    seat: "King's Landing",
-    motto: 'Hear Me Roar',
-    photo: 'https://goo.gl/images/QEqGHx',
-    colors: 'Gold on red/gold red',
-    sigil: 'A golden lion rampant on a crimson field',
-)
+# House.create(
+#     name: 'Lannister',
+#     seat: "King's Landing",
+#     motto: 'Hear Me Roar',
+#     photo: 'https://goo.gl/images/QEqGHx',
+#     colors: 'Gold on red/gold red',
+#     sigil: 'A golden lion rampant on a crimson field',
+# )
 
-House.create(
-    name: 'Targaryen',
-    seat: 'Dragonstone',
-    motto: 'Fire and Blood',
-    photo: 'https://goo.gl/images/z3fAKn',
-    colors: 'Red on black/red black',
-    sigil: 'A red three-headed dragon, on a black field',
-)
+# House.create(
+#     name: 'Targaryen',
+#     seat: 'Dragonstone',
+#     motto: 'Fire and Blood',
+#     photo: 'https://goo.gl/images/z3fAKn',
+#     colors: 'Red on black/red black',
+#     sigil: 'A red three-headed dragon, on a black field',
+# )
 
-House.create(
-    name: 'Tyrell',
-    seat: 'Highgarden',
-    motto: 'Growing Strong',
-    photo: 'https://goo.gl/images/sYuYzp',
-    colors: 'Gold on green/gold green',
-    sigil: 'A golden rose on a green field',
-)
+# House.create(
+#     name: 'Tyrell',
+#     seat: 'Highgarden',
+#     motto: 'Growing Strong',
+#     photo: 'https://goo.gl/images/sYuYzp',
+#     colors: 'Gold on green/gold green',
+#     sigil: 'A golden rose on a green field',
+# )
 
-House.create(
-    name: 'Baratheon',
-    seat: "Storm's End",
-    motto: 'Ours Is the Fury',
-    photo: 'https://goo.gl/images/QKT8xZ',
-    colors: 'Black on gold/black gold',
-    sigil: 'A crowned black stag rampant on a gold field',
-)
+# House.create(
+#     name: 'Baratheon',
+#     seat: "Storm's End",
+#     motto: 'Ours Is the Fury',
+#     photo: 'https://goo.gl/images/QKT8xZ',
+#     colors: 'Black on gold/black gold',
+#     sigil: 'A crowned black stag rampant on a gold field',
+# )
 
-House.create(
-    name: 'Martell',
-    seat: 'Sunspear',
-    motto: 'Ours Is the Fury',
-    photo: 'https://goo.gl/images/jTeXRj',
-    colors: 'Red and gold/red gold',
-    sigil: 'A red sun pierced by a gold spear, on an orange field',
-)
+# House.create(
+#     name: 'Martell',
+#     seat: 'Sunspear',
+#     motto: 'Ours Is the Fury',
+#     photo: 'https://goo.gl/images/jTeXRj',
+#     colors: 'Red and gold/red gold',
+#     sigil: 'A red sun pierced by a gold spear, on an orange field',
+# )
 
-House.create(
-    name: 'Greyjoy',
-    seat: 'Pyke',
-    motto: 'What is Dead May Never',
-    photo: 'https://goo.gl/images/jTeXRj',
-    colors: 'Gold on black/gold black',
-    sigil: 'A golden kraken on a black field',
-)
+# House.create(
+#     name: 'Greyjoy',
+#     seat: 'Pyke',
+#     motto: 'What is Dead May Never',
+#     photo: 'https://goo.gl/images/jTeXRj',
+#     colors: 'Gold on black/gold black',
+#     sigil: 'A golden kraken on a black field',
+# )
 
 
 
@@ -77,7 +77,7 @@ User.create!(
     gender: 'Female',
     username: 'ihavenoname', 
     email: 'aryastark@westeros.com', 
-    password: '1234',
+    password: '123456',
     house_id: 1,
     userable_type: 'Student', 
     userable_id: 1
@@ -93,7 +93,7 @@ User.create(
     gender: 'male',
     username: 'iknownothing', 
     email: 'jonsnow@westeros.com', 
-    password: '1234',
+    password: '123456',
     house_id: 1,
     userable_type: 'Instructor', 
     userable_id: 1,
@@ -106,7 +106,7 @@ User.create(
     gender: 'female',
     username: 'dragonqueen', 
     email: 'daenerystargaryen@westeros.com', 
-    password: '1234',
+    password: '123456',
     house_id: 3,
     userable_type: 'Instructor', 
     userable_id: 2,

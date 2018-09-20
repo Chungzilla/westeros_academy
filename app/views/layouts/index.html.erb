@@ -21,24 +21,7 @@
     </button>
     <div class="navbar-brand header">WESTEROS ACADEMY</div>
 
-    <div class="collapse navbar-collapse sticky-top" id="navbarTogglerDemo03">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-        <%= link_to 'Dashboard', users_path %> <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Students', students_path %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Instructors', instructors_path %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Courses', courses_path %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Houses', houses_path %>
-        </li>
-      </ul>
+    
       
       <ul class="nav justify-content-end">
         <%= render 'devise/nav/session_menu' %>
@@ -49,9 +32,8 @@
   </nav>
 
 
-                      <%= yield %>
+  
 
    
 </body>
 </html>
-

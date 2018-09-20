@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  
-  root 'users#index'
+  get 'home/index'
 
   resources :users
   resources :admins
@@ -11,6 +11,12 @@ Rails.application.routes.draw do
   resources :courses
   resources :houses
   resources :enrollments
+
+  authenticated do 
+    root :to => 'users#index'
+  end
+
+  root :to => 'home#index'
 
 end
 

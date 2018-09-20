@@ -1,4 +1,9 @@
 class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+
   belongs_to :userable, polymorphic: true
   belongs_to :house
   has_many :enrollments
@@ -7,7 +12,7 @@ class User < ApplicationRecord
   validates :first_name, :last_name, :gender, :username, :email, :password, presence: true
   validates :email, :username, uniqueness: true
   accepts_nested_attributes_for :userable
-
+  
   def self.gender
     %w[Female Male]
   end
