@@ -18,7 +18,7 @@
                 <%= image_tag @student.user.photo %>
             <% else %>
                 <%= image_tag image_path("temp_avatar.jpeg") %>
-            <% end%>
+            <% end %>
 
             <h3> House: <%= @student.user.house.name %> </h3>
             <h3> Username: <%= @student.user.username %> </h3>
@@ -28,25 +28,34 @@
         <div class="enrollmennt-wrapper">
             <h2>Current Courses:</h2>
 
-            <table style="width: 100%">
-                <tr>
-                    <th>Course ID</th>
-                    <th>Course Name</th>
-                    
-                    
-                </tr>
 
-                <% @student.user.enrollments.each do |single_course| %>
+                <table style="width: 100%">
                     <tr>
-                        <td> <%= single_course.course_id %> </td>
-                        <td> <%= single_course.course.name %> </td>
-                       
+                        <th>Course ID</th>
+                        <th>Course Name</th>
+                        <th>Drop Course</th>
+                        
+                        
                     </tr>
-                <% end %>
-            </table>
+
+                    <% @student.user.enrollments.each do |single_course| %>
+                        <tr>
+                            <td> <%= single_course.course_id %> </td>
+                            <td> <%= single_course.course.name %> </td>
+                            <td> <%= link_to 'Drop', single_course, method: :delete, remote:true, data: { confirm: 'Are you sure?' } %> </td>                        
+                        </tr>
+                    <% end %>
+
+                </table>
+
+                <div class="small-action">
+                 <%= link_to 'Enroll', enrollments_path %>
+                </div>
+        </div>
+
+                    
         </div>
 
     </div>
 
 </div>
-

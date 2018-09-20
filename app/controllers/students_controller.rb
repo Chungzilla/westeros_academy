@@ -1,9 +1,10 @@
 class StudentsController < ApplicationController
-    
+   
 
     def index
         @students = Student.all
-        
+        # method: get
+        # template: users/index.html.erb
     end
 
     def new

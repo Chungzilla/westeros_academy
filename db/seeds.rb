@@ -68,68 +68,48 @@
 
 
 
-# Create STUDENTS
+# # Create STUDENTS
 
-Student.create
-User.create!(
-    first_name: 'Arya', 
-    last_name: 'Stark',
-    gender: 'Female',
-    username: 'ihavenoname', 
-    email: 'aryastark@westeros.com', 
-    password: '123456',
-    house_id: 1,
-    userable_type: 'Student', 
-    userable_id: 1
-)
-
-
-# Creaate INSTRUCTORS
-
-Instructor.create
-User.create(
-    first_name: 'Jon', 
-    last_name: 'Snow',
-    gender: 'male',
-    username: 'iknownothing', 
-    email: 'jonsnow@westeros.com', 
-    password: '123456',
-    house_id: 1,
-    userable_type: 'Instructor', 
-    userable_id: 1,
-    )
-
-Instructor.create
-User.create(
-    first_name: 'Daenerys', 
-    last_name: 'Targaryen',
-    gender: 'female',
-    username: 'dragonqueen', 
-    email: 'daenerystargaryen@westeros.com', 
-    password: '123456',
-    house_id: 3,
-    userable_type: 'Instructor', 
-    userable_id: 2,
-    )
-
-
-
-
-
-
-# # Create PARENTS -> Post-MVP
-# Parent.create
-# User.create(
-#     first_name: 'Eddard', 
+# Student.create
+# User.create!(
+#     first_name: 'Arya', 
 #     last_name: 'Stark',
-#     gender: 'male',
-#     photo: 'https://goo.gl/images/rj2Cw7', 
-#     username: 'lordofthenorth', 
-#     email: 'eddardstark@winterfell.com', 
-#     password: '1234',
+#     gender: 'Female',
+#     username: 'ihavenoname', 
+#     email: 'aryastark@westeros.com', 
+#     password: '123456',
 #     house_id: 1,
-#     userable_type: 'Parent', 
+#     userable_type: 'Student', 
+#     userable_id: 1
+# )
+
+
+# # Creaate INSTRUCTORS
+
+# Instructor.create
+# User.create(
+#     first_name: 'Jon', 
+#     last_name: 'Snow',
+#     gender: 'male',
+#     username: 'iknownothing', 
+#     email: 'jonsnow@westeros.com', 
+#     password: '123456',
+#     house_id: 1,
+#     userable_type: 'Instructor', 
 #     userable_id: 1,
+#     )
+
+# Instructor.create
+# User.create(
+#     first_name: 'Daenerys', 
+#     last_name: 'Targaryen',
+#     gender: 'female',
+#     username: 'dragonqueen', 
+#     email: 'daenerystargaryen@westeros.com', 
+#     password: '123456',
+#     house_id: 3,
+#     userable_type: 'Instructor', 
+#     userable_id: 2,
 #     )
 
 
@@ -137,58 +117,91 @@ User.create(
 
 
 
-
-# Create COURSES
-
-Course.create(
-    name: 'Combat', 
-    total_hours: 5,
-    syllabus: 'Learn to fight... to the death!',
-    )
-
-Course.create(
-    name: 'Science', 
-    total_hours: 5,
-    syllabus: 'A course that teaches you to builds and organize knowledge, with rather interesting experimentation lab assignments!',
-)
-
-Course.create(
-    name: 'Love 101', 
-    total_hours: 3,
-    syllabus: 'War is one thing. In this course, we will not choose sides when it come to love.',
-)
-
-Course.create(
-    name: 'Dragons 101', 
-    total_hours: 5,
-    syllabus: 'In this course, you will learn how and why I was born to rule the Seven Kingdoms... dragons!',
-)
+# # # Create PARENTS -> Post-MVP
+# # Parent.create
+# # User.create(
+# #     first_name: 'Eddard', 
+# #     last_name: 'Stark',
+# #     gender: 'male',
+# #     photo: 'https://goo.gl/images/rj2Cw7', 
+# #     username: 'lordofthenorth', 
+# #     email: 'eddardstark@winterfell.com', 
+# #     password: '1234',
+# #     house_id: 1,
+# #     userable_type: 'Parent', 
+# #     userable_id: 1,
+# #     )
 
 
 
 
 
 
-# Create ENROLLMENTS
 
-Enrollment.create(
-    grade: 100, 
-    user_id: 1,
-    course_id: 1,
-)
+# # Create COURSES
 
-Enrollment.create(
-    user_id: 2,
-    course_id: 1,
-)
+# Course.create(
+#     name: 'Combat', 
+#     total_hours: 5,
+#     syllabus: 'Learn to fight... to the death!',
+#     )
 
-Enrollment.create(
-    grade: 95, 
-    user_id: 1,
-    course_id: 4,
-)
+# Course.create(
+#     name: 'Science', 
+#     total_hours: 5,
+#     syllabus: 'A course that teaches you to builds and organize knowledge, with rather interesting experimentation lab assignments!',
+# )
 
-Enrollment.create(
-    user_id: 4,
-    course_id: 4,
-)
+# Course.create(
+#     name: 'Love 101', 
+#     total_hours: 3,
+#     syllabus: 'War is one thing. In this course, we will not choose sides when it come to love.',
+# )
+
+# Course.create(
+#     name: 'Dragons 101', 
+#     total_hours: 5,
+#     syllabus: 'In this course, you will learn how and why I was born to rule the Seven Kingdoms... dragons!',
+# )
+
+
+
+
+
+
+# # Create ENROLLMENTS
+
+# Enrollment.create(
+#     grade: 100, 
+#     user_id: 1,
+#     course_id: 1,
+# )
+
+# Enrollment.create(
+#     user_id: 2,
+#     course_id: 1,
+# )
+
+# Enrollment.create(
+#     grade: 95, 
+#     user_id: 1,
+#     course_id: 4,
+# )
+
+# Enrollment.create(
+#     user_id: 4,
+#     course_id: 4,
+# )
+
+# Admin.create
+# User.create(
+#     first_name: 'Jazmine', 
+#     last_name: 'Chung',
+#     gender: 'female',
+#     username: 'cake-boss', 
+#     email: 'chung.jazmine@westeros.com', 
+#     password: '123456',
+#     house_id: 1,
+#     userable_type: 'Admin', 
+#     userable_id: 1,
+#     )

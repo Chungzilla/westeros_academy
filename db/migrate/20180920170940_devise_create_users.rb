@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class DeviseCreateUsers < ActiveRecord::Migration[5.2]
-  before_action :authenticate_user!
+
   
   def change
     create_table :users do |t|
