@@ -23,37 +23,42 @@
             <h3> House: <%= @student.user.house.name %> </h3>
             <h3> Username: <%= @student.user.username %> </h3>
             <h3> Email: <%= @student.user.email %> </h3>
-        </div>
 
-        <div class="enrollmennt-wrapper">
-            <h2>Current Courses:</h2>
+            <hr>
 
+            <div class="enrollmennt-wrapper">
+                <h2>Current Courses:</h2>
 
                 <table style="width: 100%">
                     <tr>
                         <th>Course ID</th>
                         <th>Course Name</th>
-                        <th>Drop Course</th>
-                        
-                        
+                        <th>Grade</th>
+                        <th>Total Hours</th>
+                        <th>Drop Course</th>  
                     </tr>
 
                     <% @student.user.enrollments.each do |single_course| %>
-                        <tr>
+                        <tr id = "enrollment-<%=single_course.id %>">
                             <td> <%= single_course.course_id %> </td>
+                            <%= puts "****************" %>
+                            <%= puts single_course.id %>
+                            <%= puts "****************" %>
                             <td> <%= single_course.course.name %> </td>
-                            <td> <%= link_to 'Drop', single_course, method: :delete, remote:true, data: { confirm: 'Are you sure?' } %> </td>                        
+
+                            <td> <%= single_course.grade %> </td>
+                            <td> <%= single_course.course.total_hours%> </td>
+                            <td> <%= link_to 'Drop', enrollment_path(single_course), method: :delete, remote:true, data: { confirm: 'Are you sure?' } %> </td> 
                         </tr>
                     <% end %>
-
                 </table>
 
                 <div class="small-action">
                  <%= link_to 'Enroll', enrollments_path %>
                 </div>
+            </div>
         </div>
-
-                    
+          
         </div>
 
     </div>
