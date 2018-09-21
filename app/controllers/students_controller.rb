@@ -22,6 +22,7 @@ class StudentsController < ApplicationController
     def show
         @student = Student.find(params[:id])
         #Renders individual student
+        @course = params[:course_id]
     end
 
     def create
