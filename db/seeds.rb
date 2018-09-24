@@ -212,7 +212,7 @@ User.create(
     last_name: 'Patlut',
     gender: 'male',
     username: 'dpatlut', 
-    email: 'chung.jazmine@westeros.com', 
+    email: 'patlut.david@westeros.com', 
     password: '123456',
     house_id: 7,
     userable_type: 'Admin', 
