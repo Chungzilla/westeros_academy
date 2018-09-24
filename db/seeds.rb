@@ -206,15 +206,15 @@
 #     userable_id: 1,
 #     )
 
-# Admin.create
-User.create(
-    first_name: 'David', 
-    last_name: 'Patlut',
-    gender: 'male',
-    username: 'dpatlut', 
-    email: 'patlut.david@westeros.com', 
-    password: '123456',
-    house_id: 7,
-    userable_type: 'Admin', 
-    userable_id: 2,
-    )
+# # Admin.create
+# User.create(
+#     first_name: 'David', 
+#     last_name: 'Patlut',
+#     gender: 'male',
+#     username: 'dpatlut', 
+#     email: 'davidpatlut@westeros.com', 
+#     password: '123456',
+#     house_id: 7,
+#     userable_type: 'Admin', 
+#     userable_id: 2,
+#     )
