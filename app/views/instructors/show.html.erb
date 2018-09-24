@@ -1,0 +1,66 @@
+<div class="container-fluid">
+    <div class="options">
+        <div class="small-action">
+            <%= link_to 'Back To Instructors', instructors_path %>
+        </div>
+        
+        <div class="small-action">
+            <%= link_to 'Edit instructor', edit_instructor_path(@instructor) %> 
+        </div>
+    </div>
+
+    <div class="show-wrapper">
+
+        <div class="user-info">
+            <h2><%= @instructor.user.first_name %> <%= @instructor.user.last_name %></h2>
+
+            <% if @instructor.user.photo.attached? %>
+                <%= image_tag @instructor.user.photo %>
+            <% else %>
+                <%= image_tag image_path("temp_avatar.jpeg") %>
+            <% end %>
+
+            <h3> House: <%= @instructor.user.house.name %> </h3>
+            <h3> Username: <%= @instructor.user.username %> </h3>
+            <h3> Email: <%= @instructor.user.email %> </h3>
+
+            <hr>
+
+            <div class="enrollmennt-wrapper">
+                <h2>Current Courses:</h2>
+
+                <table style="width: 100%">
+                    <tr>
+                        <th>Course ID</th>
+                        <th>Course Name</th>
+                        <th>Grade</th>
+                        <th>Total Hours</th>
+                        <th>Drop Course</th>  
+                    </tr>
+
+                    <% @instructor.user.enrollments.each do |single_course| %>
+                        <tr id = "enrollment-<%=single_course.id %>">
+                            <td> <%= single_course.course_id %> </td>
+                            <%= puts "****************" %>
+                            <%= puts single_course.id %>
+                            <%= puts "****************" %>
+                            <td> <%= single_course.course.name %> </td>
+
+                            <td> <%= single_course.grade %> </td>
+                            <td> <%= single_course.course.total_hours%> </td>
+                            <td> <%= link_to 'Drop', enrollment_path(single_course), method: :delete, remote:true, data: { confirm: 'Are you sure?' } %> </td> 
+                        </tr>
+                    <% end %>
+                </table>
+
+                <div class="small-action">
+                 <%= link_to 'Enroll', enrollments_path %>
+                </div>
+            </div>
+        </div>
+          
+        </div>
+
+    </div>
+
+</div>

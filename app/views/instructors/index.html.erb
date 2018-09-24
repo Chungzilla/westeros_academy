@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="options">
+
+        <div class="small-action"> 
+            <%= link_to 'Add New Instructor', new_instructor_path %> 
+        </div>
+    </div>
+
+<table style="width:100%">
+        <tr>
+            <th> Instructor ID</th>
+            <th> Name</th>
+            <th> Email</th>
+            <th> Edit</th>
+            <th> Delete</th>
+        </tr>
+
+<% @instructors.each do |single_instructor| %>
+        <tr>
+            <td> <%= single_instructor.id %> </td>
+            <td> <%= link_to single_instructor.user.full_name, {:action => 'show', :id => single_instructor.id} %> </td>
+            <td> <%= single_instructor.user.email %></td>
+            <td> <%= link_to 'Edit', edit_instructor_path(single_instructor.id) %> </td>
+            <td> <%= link_to 'Delete', single_instructor, method: :delete, remote:true, data: { confirm: 'Are you sure?' } %> </td>
+            
+        </tr>
+        <% end %>
+    </table>
+
