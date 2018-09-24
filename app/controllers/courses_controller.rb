@@ -12,6 +12,8 @@ class CoursesController < ApplicationController
         # method: get
         # action: index
         # template: courses/show.html.erb
+        # @enrollment = params[:enrollment_id]
+        @enrollment = Enrollment.where(course_id: @course.id)
     end
 
     def new

@@ -24,7 +24,7 @@
     <div class="collapse navbar-collapse sticky-top" id="navbarTogglerDemo03">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item active">
-        <%= link_to 'Dashboard', users_path %> <span class="sr-only">(current)</span></a>
+        <%= link_to 'Dashboard', root_path %> <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <%= link_to 'Students', students_path %>
@@ -36,18 +36,29 @@
           <%= link_to 'Courses', courses_path %>
         </li>
         <li class="nav-item">
-          <%= link_to 'Houses', houses_path %>
+          <%= link_to 'Enrollments', enrollments_path %>
         </li>
+        
       </ul>
       
       <ul class="nav justify-content-end">
-        <%= render 'devise/nav/session_menu' %>
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
+
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            Welcome back, <%= current_user.first_name %>!
+          </li>
+        <% end %>
+
+      <li class="nav-item
+          <%= render 'devise/nav/session_menu' %>
+      </li>
+          
       </ul>
     </div>
   </nav>
 
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
                       <%= yield %>
 

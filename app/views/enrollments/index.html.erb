@@ -1,0 +1,61 @@
+<div class="container-fluid">
+
+    <div class="show-wrapper">
+        <div class="user-info">
+            <h1 class="text-center">Active Instructors</h1>
+            
+            <div class="small-action">
+                <%= link_to 'Add New Instructor', new_instructor_path %>
+            </div>
+
+            <table style="width:100%">
+            <tr>
+                <th> Instructor ID</th>
+                <th> Name</th>
+                <th> Email</th>
+                <th> Edit</th>
+                <th> Delete</th>
+            </tr>
+
+            <% @instructors.each do |single_instructor| %>
+            <tr>
+                <td> <%= single_instructor.id %> </td>
+                <td> <a href="/instructors/<%= single_instructor.id %>">
+                    <%= single_instructor.user.full_name %> </a> 
+                </td>
+                <td> <%= single_instructor.user.email %> </td>
+                <td> <%= link_to 'Edit', edit_instructor_path(single_instructor.id) %> </td>
+                <td> <%= link_to 'Delete', single_instructor, method: :delete, remote:true, data: { confirm: 'Are you sure?' } %> </td>
+                
+            </tr>
+            <% end %>
+            </table>
+        </div>
+    
+    <div class="user-info">
+        <h1 class="text-center">Currently Enrolled Students</h1>
+
+        <div class="small-action">
+             <%= link_to 'Add New Student', new_student_path %>
+        </div>
+        <table style="width:100%">
+                <tr>
+                    <th> Student ID</th>
+                    <th> Name</th>
+                    <th> Email</th>
+                    <th> Edit</th>
+                    <th> Delete</th>
+                </tr>
+
+            <% @students.each do |single_student| %>
+                <tr>
+                    <td> <%= single_student.id %> </td>
+                    <td> <a href="/students/<%= single_student.id %>"> <%= single_student.user.full_name %> </a> </td>
+                    <td> <%= single_student.user.email %></td>
+                    <td> <%= link_to 'Edit', edit_student_path(single_student.id) %> </td>
+                    <td> <%= link_to 'Delete', single_student, method: :delete, remote:true, data: { confirm: 'Are you sure?' } %> </td>
+                </tr>
+            <% end %>
+        </table>
+    </div>
+</div>

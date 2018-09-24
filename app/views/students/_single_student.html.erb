@@ -1,0 +1,14 @@
+<div class="show-wrapper">
+
+        <div class="user-info">
+            <h2><%= @student.user.first_name %> <%= @student.user.last_name %></h2>
+
+            <% if @student.user.photo.attached? %>
+                <%= image_tag @student.user.photo %>
+            <% else %>
+                <%= image_tag image_path("temp_avatar.jpeg") %>
+            <% end %>
+
+            <h3> House: <%= @student.user.house.name %> </h3>
+            <h3> Username: <%= @student.user.username %> </h3>
+            <h3> Email: <%= @student.user.email %> </h3>

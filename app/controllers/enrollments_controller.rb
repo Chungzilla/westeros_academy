@@ -1,5 +1,11 @@
 class EnrollmentsController < ApplicationController
     before_action :authenticate_user!
+
+    def index
+        @students = Student.all
+        @instructors = Instructor.all
+    end
+
     def show
         @enrollment = Enrollment.find(params[:id])
     end
@@ -14,7 +20,7 @@ class EnrollmentsController < ApplicationController
     end
 
     def create
-        @enrollment = Enrollment.new(course_id: params[:course_id], user_id: params[:enrollment][:user_id])
+        @enrollment = Enrollment.new(enrollment_params)
 
         if @enrollment.save
             redirect_to @enrollment.course

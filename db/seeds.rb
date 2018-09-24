@@ -205,3 +205,16 @@
 #     userable_type: 'Admin', 
 #     userable_id: 1,
 #     )
+
+# Admin.create
+User.create(
+    first_name: 'David', 
+    last_name: 'Patlut',
+    gender: 'male',
+    username: 'dpatlut', 
+    email: 'chung.jazmine@westeros.com', 
+    password: '123456',
+    house_id: 7,
+    userable_type: 'Admin', 
+    userable_id: 2,
+    )

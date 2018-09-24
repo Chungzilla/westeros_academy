@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :enrollments
 
   authenticated do 
-    root :to => 'students#index'
+    root :to => 'users#index'
   end
 
   root :to => 'home#index'
