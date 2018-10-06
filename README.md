@@ -1,5 +1,6 @@
 # <img src="https://github.com/Chungzilla/westeros_academy/blob/master/app/assets/images/favicon-256.png" width="48"> Westeros Academy
-[![forthebadge](https://forthebadge.com/images/badges/made-with-ruby.svg)](https://forthebadge.com) 
+[![forthebadge](https://forthebadge.com/images/badges/made-with-ruby.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/winter-is-coming.svg)](https://forthebadge.com)
 
 Westeros Academy is a an educational admin panel based on the popular television series, Game of Thrones.
