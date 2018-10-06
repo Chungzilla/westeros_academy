@@ -1,24 +1,37 @@
-# README
+# <img src="https://github.com/Chungzilla/westeros_academy/blob/master/app/assets/images/favicon-256.png" width="48"> Westeros Academy
+[![forthebadge](https://forthebadge.com/images/badges/made-with-ruby.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/winter-is-coming.svg)](https://forthebadge.com)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Westeros Academy is a an educational admin panel based on the popular television series, Game of Thrones.
+A user can login and manage students, faculty, courses, and enrollments.
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+<img src="https://media.giphy.com/media/xUA7b7vx3DEZxMA9Zm/giphy.gif">
 
-* System dependencies
 
-* Configuration
+### Installation
+In order to install the app, you will need the latest version of Ruby installed onto your local machine. This app also uses a PostgreSQL object-relational database.
 
-* Database creation
+### Site Demo
+I encourage you to test out the site! You can either sign up and create your own account, or login to a demo account [here](https://www.westeros-academy.herokuapp.com) using the following credtials:
 
-* Database initialization
+```
+Email: admin@westeros.com
 
-* How to run the test suite
+Password: admin1
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Built With
+- [Ruby](https://www.ruby-lang.org/en/) - programming lanuguage used 
+- [Rails](https://rubyonrails.org/) - domain-specific languange and Ruby gem
+- [Devise](https://github.com/plataformatec/devise) - comprehensive authentication solution used to ensure data integrity
+- [Bootstrap](https://github.com/twbs/bootstrap-rubygem) - front-end framework for styling
+- [PostgreSQL](https://www.postgresql.org/) - relational database structure
 
-* Deployment instructions
+## Authors
+- **Jazmine Chung** - [Westeros Academy](https://westeros-academy.herokuapp.com)
 
-* ...
+
+
