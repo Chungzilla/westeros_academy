@@ -25,6 +25,7 @@ Password: admin1
 ## Built With
 - [Ruby](https://www.ruby-lang.org/en/) - programming lanuguage used 
 - [Rails](https://rubyonrails.org/) - domain-specific languange and Ruby gem
+- [Devise](https://github.com/plataformatec/devise) - comprehensive authentication solution used to ensure data integrity
 - [Bootstrap](https://github.com/twbs/bootstrap-rubygem) - front-end framework for styling
 - [PostgreSQL](https://www.postgresql.org/) - relational database structure
 
