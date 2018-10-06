@@ -219,15 +219,15 @@
 #     userable_id: 2,
 #     )
 
-Admin.create
-User.create(
-    first_name: 'Admin', 
-    last_name: 'User',
-    gender: 'female',
-    username: 'admin', 
-    email: 'admin@westeros.com', 
-    password: 'admin1',
-    house_id: 1,
-    userable_type: 'Admin', 
-    userable_id: 3,
-    )
+# Admin.create
+# User.create(
+#     first_name: 'Admin', 
+#     last_name: 'User',
+#     gender: 'female',
+#     username: 'admin', 
+#     email: 'admin@westeros.com', 
+#     password: 'admin1',
+#     house_id: 1,
+#     userable_type: 'Admin', 
+#     userable_id: 3,
+#     )
