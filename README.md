@@ -29,7 +29,7 @@ Password: admin1
 - [PostgreSQL](https://www.postgresql.org/) - relational database structure
 
 ## Authors
-- **Jazmine Chung** - [Kicklr](https://kicklr.herokuapp.com)
+- **Jazmine Chung** - [Westeros Academy](https://westeros-academy.herokuapp.com)
 
 
 
